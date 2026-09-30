@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Gifted Delights by Divyanshi — handmade crochet gifts, little keepsakes and custom pieces made at home." />
+  <meta name="theme-color" content="#f7f0e8" />
+  <title>Gifted Delights by Divyanshi — Handmade Crochet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbf7f1;
+      --paper-2: #f3ebe2;
+      --ink: #2f2a27;
+      --muted: #756d67;
+      --line: #dfd3c8;
+      --rose: #b76e69;
+      --rose-dark: #8f514d;
+      --sage: #74806b;
+      --cream: #fffdf9;
+      --shadow: 0 18px 50px rgba(69, 50, 38, .09);
+      --radius: 24px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    button, input, textarea { font:inherit; }
+    button { cursor:pointer; }
+    img { display:block; max-width:100%; }
+    .container { width:min(calc(100% - 36px), var(--max)); margin:auto; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:700; color:var(--rose-dark); }
+    .serif { font-family:"Playfair Display",serif; }
+    .announcement { background:#332d29; color:#fffaf4; text-align:center; padding:9px 16px; font-size:.78rem; letter-spacing:.04em; }
+    header { position:sticky; top:0; z-index:20; background:rgba(251,247,241,.92); backdrop-filter:blur(16px); border-bottom:1px solid rgba(223,211,200,.75); }
+    .nav { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:11px; font-family:"Playfair Display",serif; font-size:1.12rem; font-weight:600; white-space:nowrap; }
+    .brand-mark { width:44px; height:44px; flex:none; display:block; color:var(--rose); }
+    .brand-mark svg { width:100%; height:100%; display:block; overflow:visible; }
+    .brand-name { font-family:"Fredoka","Nunito","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif; font-weight:700; font-size:1.42em; letter-spacing:.02em; color:transparent; background-color:var(--rose); background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%229%22 height=%2212%22 viewBox=%220 0 9 12%22%3E%3Crect width=%229%22 height=%2212%22 fill=%22%23b76e69%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M.5 .8L2.5 5.2L4.5 .8%22 stroke=%22%238f514d%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M4.5 .8L6.5 5.2L8.5 .8%22 stroke=%22%238f514d%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M.9 .5L2.5 4.1%22 stroke=%22%23e3aaa4%22 stroke-width=%22.6%22/%3E%3Cpath d=%22M4.9 .5L6.5 4.1%22 stroke=%22%23e3aaa4%22 stroke-width=%22.6%22/%3E%3Cpath d=%22M2.5 6.8L4.5 11.2L6.5 6.8%22 stroke=%22%238f514d%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M-1.5 6.8L.5 11.2L2.5 6.8%22 stroke=%22%238f514d%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M6.5 6.8L8.5 11.2L10.5 6.8%22 stroke=%22%238f514d%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M2.9 6.5L4.5 10.1%22 stroke=%22%23e3aaa4%22 stroke-width=%22.6%22/%3E%3Cpath d=%22M6.9 6.5L8.5 10.1%22 stroke=%22%23e3aaa4%22 stroke-width=%22.6%22/%3E%3Cpath d=%22M-1.1 6.5L.5 10.1%22 stroke=%22%23e3aaa4%22 stroke-width=%22.6%22/%3E%3C/g%3E%3C/svg%3E"); background-size:9px 12px; -webkit-background-clip:text; background-clip:text; -webkit-text-stroke:.5px #8f514d; paint-order:stroke fill; filter:drop-shadow(0 1.5px 0 rgba(143,81,77,.28)); }
+    .brand-text { display:inline-flex; align-items:baseline; gap:.35em; line-height:1.1; }
+    .brand-by { font-size:.62em; font-family:"Playfair Display",serif; font-style:italic; font-weight:500; color:var(--rose-dark); position:relative; top:.42em; letter-spacing:.01em; }
+    .nav-links { display:flex; align-items:center; gap:28px; font-size:.9rem; color:#514a45; }
+    .nav-links a:hover { color:var(--rose-dark); }
+    .nav-actions { display:flex; align-items:center; gap:10px; }
+    .icon-btn { border:1px solid var(--line); background:var(--cream); width:42px; height:42px; border-radius:50%; display:grid; place-items:center; color:var(--ink); position:relative; }
+    .cart-count { position:absolute; top:-3px; right:-2px; width:18px; height:18px; display:grid; place-items:center; border-radius:50%; background:var(--rose); color:white; font-size:.65rem; font-weight:700; }
+    .menu-btn { display:none; }
+    .hero { padding:62px 0 76px; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1.02fr .98fr; gap:70px; align-items:center; }
+    .hero-copy h1 { font-family:"Playfair Display",serif; font-size:clamp(3.1rem,6vw,5.8rem); line-height:.98; letter-spacing:-.055em; font-weight:500; margin:16px 0 22px; max-width:700px; }
+    .hero-copy h1 em { color:var(--rose); font-weight:500; }
+    .hero-copy p { max-width:555px; color:var(--muted); font-size:1.05rem; margin:0 0 30px; }
+    .actions { display:flex; flex-wrap:wrap; gap:11px; }
+    .btn { border:1px solid var(--ink); padding:13px 20px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; gap:9px; font-size:.88rem; font-weight:700; transition:.2s ease; }
+    .btn.primary { background:var(--ink); color:#fff; }
+    .btn.primary:hover { background:#4b403a; transform:translateY(-1px); }
+    .btn.secondary { border-color:var(--line); background:var(--cream); }
+    .btn.secondary:hover { border-color:#bca99a; }
+    .hero-note { margin-top:24px; color:var(--muted); font-size:.78rem; }
+    .hero-art { position:relative; min-height:570px; }
+    .hero-photo { position:absolute; inset:0 28px 0 0; border-radius:44% 44% 12% 12%; overflow:hidden; box-shadow:var(--shadow); background:#e6ddd4; }
+    .hero-photo img { width:100%; height:100%; object-fit:cover; }
+    .hero-photo:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(35,28,24,.02),rgba(35,28,24,.18)); }
+    .floating-card { position:absolute; right:0; bottom:30px; width:210px; padding:17px; background:rgba(255,253,249,.95); border:1px solid rgba(223,211,200,.9); box-shadow:var(--shadow); border-radius:20px; }
+    .floating-card img { height:110px; width:100%; object-fit:cover; border-radius:13px; margin-bottom:11px; }
+    .floating-card p { margin:0; font-size:.78rem; color:var(--muted); }
+    .floating-card strong { display:block; margin-bottom:3px; font-family:"Playfair Display",serif; font-size:1.02rem; }
+    .ticker { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:14px 0; overflow:hidden; white-space:nowrap; }
+    .ticker-track { display:flex; justify-content:center; gap:32px; color:#675e57; font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; }
+    .dot { color:var(--rose); }
+    section { padding:90px 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:35px; }
+    .section-head h2 { font-family:"Playfair Display",serif; font-weight:500; font-size:clamp(2.2rem,4vw,3.7rem); line-height:1; letter-spacing:-.04em; margin:8px 0 0; }
+    .section-head p { color:var(--muted); max-width:390px; margin:0; }
+    .filters { display:flex; gap:8px; overflow:auto; padding-bottom:10px; margin-bottom:25px; scrollbar-width:none; }
+    .filters::-webkit-scrollbar { display:none; }
+    .filter { flex:none; border:1px solid var(--line); background:transparent; color:#615852; border-radius:999px; padding:9px 15px; font-size:.8rem; }
+    .filter.active, .filter:hover { background:var(--ink); color:#fff; border-color:var(--ink); }
+    .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .product-card { background:var(--cream); border:1px solid var(--line); border-radius:20px; overflow:hidden; position:relative; transition:.25s ease; }
+    .product-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .product-image { aspect-ratio:1/1.05; overflow:hidden; background:#e8dfd6; position:relative; }
+    .product-image img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .product-card:hover .product-image img { transform:scale(1.035); }
+    .tag { position:absolute; left:11px; top:11px; background:rgba(255,253,249,.92); border:1px solid rgba(255,255,255,.7); border-radius:999px; padding:5px 9px; font-size:.64rem; text-transform:uppercase; letter-spacing:.08em; }
+    .product-info { padding:16px 16px 17px; }
+    .product-meta { color:#91867e; font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:5px; }
+    .product-info h3 { font-family:"Playfair Display",serif; font-size:1.16rem; font-weight:500; margin:0 0 4px; line-height:1.15; }
+    .product-info p { margin:0 0 13px; color:var(--muted); font-size:.77rem; min-height:38px; }
+    .product-bottom { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .price { font-weight:700; font-size:.93rem; }
+    .add-btn { border:1px solid #cdbeb2; background:transparent; border-radius:999px; padding:8px 12px; font-size:.74rem; font-weight:700; }
+    .add-btn:hover { background:var(--ink); color:white; border-color:var(--ink); }
+    .story { background:var(--paper-2); }
+    .story-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:center; }
+    .story-image { border-radius:25px; overflow:hidden; height:520px; position:relative; }
+    .story-image img { width:100%; height:100%; object-fit:cover; }
+    .story-label { position:absolute; left:18px; bottom:18px; background:rgba(255,253,249,.93); border-radius:16px; padding:13px 15px; font-size:.72rem; max-width:210px; }
+    .story-copy h2 { font-family:"Playfair Display",serif; font-size:clamp(2.4rem,4.2vw,4rem); font-weight:500; line-height:1.02; letter-spacing:-.04em; margin:10px 0 20px; }
+    .story-copy > p { color:var(--muted); max-width:570px; }
+    .story-points { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px; }
+    .story-point { padding-top:15px; border-top:1px solid #d2c3b6; }
+    .story-point strong { font-family:"Playfair Display",serif; font-size:1.1rem; display:block; margin-bottom:4px; }
+    .story-point span { font-size:.78rem; color:var(--muted); }
+    .custom { padding-top:100px; }
+    .custom-box { background:#302a27; color:#fffaf4; border-radius:30px; padding:54px; display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center; overflow:hidden; position:relative; }
+    .custom-box:after { content:""; position:absolute; width:320px; height:320px; border:1px solid rgba(255,255,255,.12); border-radius:50%; right:-110px; top:-110px; }
+    .custom-box h2 { font-family:"Playfair Display",serif; font-size:clamp(2.4rem,4vw,4.2rem); line-height:1; font-weight:500; letter-spacing:-.04em; margin:10px 0 18px; }
+    .custom-box p { color:#cfc3b9; max-width:580px; margin-bottom:24px; }
+    .custom-steps { display:grid; gap:13px; position:relative; z-index:1; }
+    .step { display:flex; gap:14px; align-items:flex-start; padding:15px; border:1px solid rgba(255,255,255,.13); border-radius:17px; background:rgba(255,255,255,.035); }
+    .step-num { width:29px; height:29px; flex:none; border-radius:50%; border:1px solid rgba(255,255,255,.25); display:grid; place-items:center; font-size:.7rem; }
+    .step strong { display:block; font-size:.82rem; margin-bottom:2px; }
+    .step span { display:block; color:#bdb1a8; font-size:.73rem; }
+    .faq-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:70px; }
+    .faq-list { border-top:1px solid var(--line); }
+    details { border-bottom:1px solid var(--line); padding:18px 0; }
+    summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:20px; font-weight:600; font-size:.91rem; }
+    summary::-webkit-details-marker { display:none; }
+    summary:after { content:"+"; color:var(--rose); font-size:1.2rem; font-weight:400; }
+    details[open] summary:after { content:"−"; }
+    details p { color:var(--muted); font-size:.8rem; margin:12px 25px 0 0; max-width:650px; }
+    footer { background:#282320; color:#f8f0e7; padding:60px 0 25px; }
+    .footer-grid { display:grid; grid-template-columns:1.4fr .7fr .9fr; gap:55px; padding-bottom:45px; }
+    .footer-brand { font-family:"Playfair Display",serif; font-size:1.5rem; margin-bottom:10px; }
+    footer p, footer a { color:#bdb1a8; font-size:.8rem; }
+    footer a:hover { color:white; }
+    .footer-col h4 { font-size:.72rem; text-transform:uppercase; letter-spacing:.14em; margin:0 0 15px; color:#f8f0e7; }
+    .footer-col { display:flex; flex-direction:column; gap:9px; }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:20px; display:flex; justify-content:space-between; gap:20px; color:#8f857e; font-size:.7rem; }
+    .cart-drawer { position:fixed; inset:0; z-index:50; pointer-events:none; }
+    .cart-overlay { position:absolute; inset:0; background:rgba(33,26,22,.35); opacity:0; transition:.25s; }
+    .cart-panel { position:absolute; right:0; top:0; height:100%; width:min(430px,100%); background:var(--cream); transform:translateX(102%); transition:.3s ease; display:flex; flex-direction:column; box-shadow:-20px 0 60px rgba(40,28,20,.15); }
+    .cart-drawer.open { pointer-events:auto; }
+    .cart-drawer.open .cart-overlay { opacity:1; }
+    .cart-drawer.open .cart-panel { transform:translateX(0); }
+    .cart-head { padding:21px 20px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
+    .cart-head h3 { font-family:"Playfair Display",serif; font-size:1.5rem; font-weight:500; margin:0; }
+    .close { border:0; background:transparent; font-size:1.5rem; color:var(--muted); }
+    .cart-items { flex:1; overflow:auto; padding:14px 20px; }
+    .empty-cart { color:var(--muted); text-align:center; padding:70px 20px; font-size:.85rem; }
+    .cart-item { display:grid; grid-template-columns:68px 1fr auto; gap:12px; padding:13px 0; border-bottom:1px solid #eee4da; align-items:center; }
+    .cart-item img { width:68px; height:68px; object-fit:cover; border-radius:12px; }
+    .cart-item h4 { margin:0 0 4px; font-family:"Playfair Display",serif; font-weight:500; font-size:.96rem; }
+    .cart-item small { color:#8b8078; font-size:.68rem; display:block; margin-bottom:7px; }
+    .qty { display:flex; align-items:center; gap:7px; }
+    .qty button { width:24px; height:24px; border:1px solid var(--line); border-radius:50%; background:transparent; font-size:.8rem; }
+    .cart-item-total { text-align:right; font-size:.8rem; font-weight:700; }
+    .remove { border:0; background:none; color:#a69a91; font-size:.67rem; padding:0; margin-top:6px; }
+    .cart-footer { padding:18px 20px 22px; border-top:1px solid var(--line); }
+    .subtotal { display:flex; justify-content:space-between; font-weight:700; margin-bottom:6px; }
+    .cart-note { font-size:.7rem; color:var(--muted); margin:0 0 15px; }
+    .wa-btn { width:100%; border:0; background:#2f6d48; color:#fff; border-radius:13px; padding:14px; font-weight:700; display:flex; justify-content:center; gap:9px; align-items:center; }
+    .wa-btn:hover { background:#255a3a; }
+    .toast { position:fixed; left:50%; bottom:24px; transform:translate(-50%,20px); background:#302a27; color:white; border-radius:999px; padding:11px 17px; font-size:.76rem; opacity:0; pointer-events:none; z-index:70; transition:.25s; box-shadow:var(--shadow); }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    @media (max-width: 950px) {
+      .nav-links { display:none; }
+      .menu-btn { display:grid; }
+      .hero-grid, .story-grid, .custom-box, .faq-grid { grid-template-columns:1fr; }
+      .hero { padding-top:40px; }
+      .hero-art { min-height:500px; }
+      .hero-photo { inset:0 0 0 25px; }
+      .floating-card { right:10px; }
+      .product-grid { grid-template-columns:repeat(3,1fr); }
+      .story-image { height:420px; }
+      .custom-box { padding:38px; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width: 650px) {
+      .container { width:min(calc(100% - 28px), var(--max)); }
+      .announcement { font-size:.68rem; }
+      .nav { height:68px; }
+      .brand { font-size:.92rem; gap:8px; }
+      .brand-mark { width:38px; height:38px; }
+      .brand-by { font-size:.72em; }
+      .brand-name { font-size:1.02em; letter-spacing:0; }
+      .hero { padding:32px 0 52px; }
+      .hero-copy h1 { font-size:3.35rem; }
+      .hero-copy p { font-size:.92rem; }
+      .hero-art { min-height:410px; margin-top:10px; }
+      .hero-photo { inset:0 16px 0 0; border-radius:36% 36% 12% 12%; }
+      .floating-card { width:165px; padding:11px; bottom:12px; }
+      .floating-card img { height:83px; margin-bottom:8px; }
+      .floating-card strong { font-size:.9rem; }
+      .floating-card p { font-size:.68rem; }
+      .ticker-track { justify-content:flex-start; width:max-content; font-size:.65rem; gap:18px; }
+      section { padding:62px 0; }
+      .section-head { display:block; margin-bottom:25px; }
+      .section-head p { margin-top:14px; font-size:.83rem; }
+      .product-grid { grid-template-columns:repeat(2,1fr); gap:11px; }
+      .product-info { padding:12px; }
+      .product-info h3 { font-size:1rem; }
+      .product-info p { font-size:.69rem; min-height:34px; }
+      .product-meta { font-size:.57rem; }
+      .add-btn { padding:7px 9px; font-size:.66rem; }
+      .price { font-size:.8rem; }
+      .story-grid { gap:30px; }
+      .story-image { height:350px; }
+      .story-copy h2 { font-size:2.8rem; }
+      .story-points { gap:11px; }
+      .story-point strong { font-size:.95rem; }
+      .story-point span { font-size:.68rem; }
+      .custom-box { padding:30px 22px; gap:30px; border-radius:23px; }
+      .custom-box h2 { font-size:2.65rem; }
+      .custom-box p { font-size:.8rem; }
+      .footer-grid { grid-template-columns:1fr; gap:28px; }
+      .footer-bottom { flex-direction:column; gap:5px; }
+      .footer-brand { font-size:1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Handmade slowly, packed carefully · Custom pieces welcome</div>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Gifted Delights by Divyanshi home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="21" cy="26" r="15" fill="#fffdf9"/>
+            <path d="M9.5 19c7 3 17 3 23.5-2"/>
+            <path d="M7 26c8 3.5 19 3.5 28-1"/>
+            <path d="M8.5 33c7 3 16 3 23-.5"/>
+            <path d="M14 13c5 5 6 17 2 26"/>
+            <path d="M25 11.5c3.5 6 4.5 16 0 27"/>
+            <path d="M34 39c4 2 7 5 10 3s0-6-4-5" stroke-width="1.4"/>
+            <path d="M28 8L44 3.5" stroke-width="2.2"/>
+            <path d="M44 3.5c1.4-.5 2.6.6 2 1.8" stroke-width="2"/>
+            <circle cx="36" cy="6" r=".9" fill="currentColor" stroke="none"/>
+            <path d="M40.5 12.5c1.3 1.2 1.3 2.8 0 4-1.2 1-2.6.6-3.2-.4" stroke-width="1.2" opacity=".8"/>
+          </svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">Gifted Delights</span><span class="brand-by">by Divyanshi</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#shop">Shop</a><a href="#story">Our story</a><a href="#custom">Custom</a><a href="#faq">FAQs</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛍<span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div id="mobileNav" style="display:none;border-top:1px solid var(--line);padding:12px 18px 16px;background:var(--paper)">
+      <div class="container" style="display:grid;gap:10px;font-size:.9rem"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#custom">Custom orders</a><a href="#faq">FAQs</a></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Handmade crochet · made at home</div>
+          <h1>Little things,<br><em>made to mean</em><br>something.</h1>
+          <p>Soft flowers, tiny keepsakes and thoughtful crochet pieces — made one stitch at a time for the people and moments you want to remember.</p>
+          <div class="actions"><a class="btn primary" href="#shop">Browse the collection <span>→</span></a><a class="btn secondary" href="#custom">Have something in mind?</a></div>
+          <div class="hero-note">Every piece is handmade, so tiny variations are part of its charm.</div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-photo"><img src="https://images.unsplash.com/photo-1749013308478-4176584af239?auto=format&fit=crop&w=1200&q=85" alt="Handmade crochet flowers arranged for gifting" /></div>
+          <div class="floating-card">
+            <img src="https://images.unsplash.com/photo-1753366556705-1f657d2fa4db?auto=format&fit=crop&w=500&q=85" alt="Crochet sunflower" />
+            <strong>A flower that stays.</strong><p>For desks, bedside tables, or someone who deserves a little sunshine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker"><div class="ticker-track"><span>100% handmade</span><span class="dot">✦</span><span>made to order</span><span class="dot">✦</span><span>custom colours</span><span class="dot">✦</span><span>gift-ready</span><span class="dot">✦</span><span>WhatsApp ordering</span></div></div>
+
+    <section id="shop">
+      <div class="container">
+        <div class="section-head"><div><div class="eyebrow">The little shop</div><h2>Made for gifting,<br>or keeping.</h2></div><p>Pick something from the collection, add it to your basket, and send the final order to WhatsApp. We'll confirm availability, delivery and payment there.</p></div>
+        <div class="filters" id="filters"></div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <div class="story-image"><img src="https://images.unsplash.com/photo-1700170447159-9d2d0da133a5?auto=format&fit=crop&w=900&q=85" alt="Colourful handmade crochet flowers" /><div class="story-label">A quiet little craft, made with patience and a lot of yarn.</div></div>
+        <div class="story-copy"><div class="eyebrow">A little about the maker</div><h2>Made by hand.<br>Kept personal.</h2><p>Gifted Delights by Divyanshi is a small homemade crochet brand for people who would rather give something thoughtful than something ordinary.</p><p>There is no factory line behind these pieces. Each one starts with yarn, a hook and an idea — then gets its own colours, little imperfections and finishing touches. That is what makes handmade feel different.</p><div class="story-points"><div class="story-point"><strong>Slow-made</strong><span>Pieces are made with time and care rather than rushed out in bulk.</span></div><div class="story-point"><strong>Personal</strong><span>Colours, notes and custom ideas can be discussed directly.</span></div><div class="story-point"><strong>Gift-ready</strong><span>Tell us the occasion and we can help make the little details feel right.</span></div><div class="story-point"><strong>Made at home</strong><span>A small-batch approach keeps every order close to the maker.</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="custom" class="custom">
+      <div class="container">
+        <div class="custom-box">
+          <div>
+            <div class="eyebrow" style="color:#d89b95">Something a little more specific?</div>
+            <h2>Tell me what you're imagining.</h2>
+            <p>A favourite flower, a particular colour palette, a tiny character, a name, a gift for a very specific person — send the idea. We can work out the design, price and making time together.</p>
+            <a class="btn" style="background:#fffaf4;color:#302a27;border-color:#fffaf4" href="https://wa.me/919999999999?text=Hi%20Divyanshi!%20I%27d%20like%20to%20discuss%20a%20custom%20crochet%20order." target="_blank" rel="noopener">Start a custom conversation →</a>
+          </div>
+          <div class="custom-steps"><div class="step"><div class="step-num">01</div><div><strong>Share your idea</strong><span>Colour, item, occasion, size or even a reference photo.</span></div></div><div class="step"><div class="step-num">02</div><div><strong>We work out the details</strong><span>You'll get a price and realistic making timeline before you confirm.</span></div></div><div class="step"><div class="step-num">03</div><div><strong>It gets made for you</strong><span>Once confirmed, your piece is crocheted, finished and packed.</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container faq-grid">
+        <div><div class="eyebrow">Before you order</div><h2 class="serif" style="font-size:clamp(2.4rem,4vw,3.7rem);font-weight:500;line-height:1.03;letter-spacing:-.04em;margin:10px 0 15px">A few useful<br>little answers.</h2><p style="color:var(--muted);font-size:.82rem;max-width:340px">Because handmade orders work a little differently from adding something to a big-box cart.</p></div>
+        <div class="faq-list">
+          <details open><summary>How do I place an order?</summary><p>Add the pieces you want to your basket and tap “Send order on WhatsApp”. The message includes each product's ID, name, quantity and total so we can confirm everything together.</p></details>
+          <details><summary>Can I change the colour or size?</summary><p>For many pieces, yes. Custom colours, sizes and small personal touches can be discussed on WhatsApp before the order is confirmed.</p></details>
+          <details><summary>How long does a handmade order take?</summary><p>It depends on the item and current queue. Ready pieces can move faster; made-to-order and custom pieces take longer. The exact timeline is confirmed before payment.</p></details>
+          <details><summary>How does payment work?</summary><p>Payment details are confirmed directly on WhatsApp after your order is reviewed. Do not send payment until the final amount and payment method have been confirmed.</p></details>
+          <details><summary>Are the photos exact?</summary><p>These are temporary stock/demo photos for the website. They will be replaced with Divyanshi's own product photographs before launch so customers see the actual pieces they are ordering.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Gifted Delights by Divyanshi</div><p>Handmade crochet gifts, small joys and custom pieces — made slowly, from home.</p><p style="margin-top:18px">For orders, custom ideas or simply to ask a question, WhatsApp is the quickest way to reach us.</p></div>
+        <div class="footer-col"><h4>Explore</h4><a href="#shop">Shop all</a><a href="#story">Our story</a><a href="#custom">Custom orders</a><a href="#faq">FAQs</a></div>
+        <div class="footer-col"><h4>Say hello</h4><a href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><span style="color:#bdb1a8;font-size:.8rem">Made with yarn & patience.</span></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Gifted Delights by Divyanshi</span><span>Product photos are temporary stock images in this demo.</span></div>
+    </div>
+  </footer>
+
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-panel" aria-label="Shopping basket">
+      <div class="cart-head"><h3>Your little basket</h3><button class="close" id="closeCart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><span id="subtotal">₹0</span></div><p class="cart-note">Delivery and final payment details are confirmed on WhatsApp before you pay.</p><button class="wa-btn" id="whatsappOrder">Send order on WhatsApp →</button></div>
+    </aside>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Replace this number with Divyanshi's WhatsApp number, including country code, before launch.
+    const WHATSAPP_NUMBER = '919999999999';
+    const products = [
+      { id:'GD-001', name:'Forever Daisy', category:'Flowers', price:299, image:'https://images.unsplash.com/photo-1753366556705-1f657d2fa4db?auto=format&fit=crop&w=700&q=85', desc:'A cheerful little flower that never needs watering.', tag:'Bestseller' },
+      { id:'GD-002', name:'Mini Sunflower Pot', category:'Flowers', price:449, image:'https://images.unsplash.com/photo-1700171518313-5dd219beaaa6?auto=format&fit=crop&w=700&q=85', desc:'A pocket-sized bit of sunshine for a desk or shelf.', tag:'Gift pick' },
+      { id:'GD-003', name:'Daisy Bookmark', category:'Accessories', price:199, image:'https://images.pexels.com/photos/35155955/pexels-photo-35155955.jpeg?auto=compress&cs=tinysrgb&w=800', desc:'A soft floral bookmark for slow mornings and good books.', tag:'New' },
+      { id:'GD-004', name:'Petal Keychain', category:'Accessories', price:179, image:'https://images.unsplash.com/photo-1700170447159-9d2d0da133a5?auto=format&fit=crop&w=700&q=85', desc:'A tiny handmade charm for keys, bags or pencil cases.', tag:'' },
+      { id:'GD-005', name:'Pastel Flower Bunch', category:'Flowers', price:699, image:'https://images.unsplash.com/photo-1749013308478-4176584af239?auto=format&fit=crop&w=700&q=85', desc:'A small forever bouquet in soft, easy-to-love colours.', tag:'Gift pick' },
+      { id:'GD-006', name:'Cozy Crochet Pouch', category:'Bags & Pouches', price:549, image:'https://images.pexels.com/photos/30859912/pexels-photo-30859912.jpeg?auto=compress&cs=tinysrgb&w=800', desc:'A simple handmade pouch for little everyday essentials.', tag:'' },
+      { id:'GD-007', name:'Strawberry Charm', category:'Accessories', price:199, image:'https://images.unsplash.com/photo-1700171518313-5dd219beaaa6?auto=format&fit=crop&w=700&q=85', desc:'A playful strawberry-inspired charm with a handmade feel.', tag:'' },
+      { id:'GD-008', name:'Crochet Coaster Set', category:'Home', price:399, image:'https://images.pexels.com/photos/11016038/pexels-photo-11016038.jpeg?auto=compress&cs=tinysrgb&w=800', desc:'Soft textured coasters to make the coffee corner feel warmer.', tag:'' },
+      { id:'GD-009', name:'Little Bear Buddy', category:'Plushies', price:599, image:'https://images.pexels.com/photos/29753250/pexels-photo-29753250.jpeg?auto=compress&cs=tinysrgb&w=800', desc:'A tiny cuddly companion made for shelves, gifts and smiles.', tag:'Gift pick' },
+      { id:'GD-010', name:'Rainbow Mini Bouquet', category:'Flowers', price:799, image:'https://images.pexels.com/photos/20269075/pexels-photo-20269075.jpeg?auto=compress&cs=tinysrgb&w=800', desc:'A colourful little arrangement for birthdays or just-because days.', tag:'Bestseller' },
+      { id:'GD-011', name:'Crochet Hair Bow', category:'Accessories', price:229, image:'https://images.unsplash.com/photo-1753366556705-1f657d2fa4db?auto=format&fit=crop&w=700&q=85', desc:'A soft, handmade bow with a quiet vintage feel.', tag:'' },
+      { id:'GD-012', name:'Custom Name Charm', category:'Custom', price:349, image:'https://images.unsplash.com/photo-1749013308478-4176584af239?auto=format&fit=crop&w=700&q=85', desc:'Personalise a small crochet charm with a name or initial.', tag:'Personalise' }
+    ];
+
+    const state = { cart: JSON.parse(localStorage.getItem('gifted-delights-cart') || '[]'), filter:'All' };
+    const productGrid = document.getElementById('productGrid');
+    const filters = document.getElementById('filters');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartItems = document.getElementById('cartItems');
+    const cartCount = document.getElementById('cartCount');
+    const subtotal = document.getElementById('subtotal');
+    const toast = document.getElementById('toast');
+
+    function money(n){ return '₹' + n.toLocaleString('en-IN'); }
+    function save(){ localStorage.setItem('gifted-delights-cart', JSON.stringify(state.cart)); }
+    function showToast(msg){ toast.textContent=msg; toast.classList.add('show'); clearTimeout(window.toastTimer); window.toastTimer=setTimeout(()=>toast.classList.remove('show'),1900); }
+    function categories(){ return ['All', ...new Set(products.map(p=>p.category))]; }
+    function renderFilters(){ filters.innerHTML = categories().map(c=>`<button class="filter ${state.filter===c?'active':''}" data-filter="${c}">${c}</button>`).join(''); }
+    function renderProducts(){
+      const visible = state.filter==='All' ? products : products.filter(p=>p.category===state.filter);
+      productGrid.innerHTML = visible.map(p=>`<article class="product-card"><div class="product-image"><img loading="lazy" src="${p.image}" alt="${p.name}"/>${p.tag?`<span class="tag">${p.tag}</span>`:''}</div><div class="product-info"><div class="product-meta">${p.category} · ${p.id}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add-btn" data-add="${p.id}">Add to basket</button></div></div></article>`).join('');
+    }
+    function cartDetails(){ return state.cart.map(item=>({ ...products.find(p=>p.id===item.id), qty:item.qty })).filter(Boolean); }
+    function renderCart(){
+      const items=cartDetails();
+      const count=items.reduce((s,i)=>s+i.qty,0); const total=items.reduce((s,i)=>s+i.price*i.qty,0);
+      cartCount.textContent=count; cartCount.style.display=count?'grid':'none'; subtotal.textContent=money(total);
+      cartItems.innerHTML = items.length ? items.map(i=>`<div class="cart-item"><img src="${i.image}" alt="${i.name}"><div><h4>${i.name}</h4><small>${i.id} · ${money(i.price)}</small><div class="qty"><button data-dec="${i.id}" aria-label="Decrease quantity">−</button><span>${i.qty}</span><button data-inc="${i.id}" aria-label="Increase quantity">+</button></div></div><div class="cart-item-total">${money(i.price*i.qty)}<button class="remove" data-remove="${i.id}">Remove</button></div></div>`).join('') : `<div class="empty-cart"><div style="font-size:2rem;margin-bottom:8px">🧶</div>Your basket is empty.<br>Add something small and lovely.</div>`;
+      document.getElementById('whatsappOrder').disabled=!items.length;
+      document.getElementById('whatsappOrder').style.opacity=items.length?1:.45;
+    }
+    function openCart(){ cartDrawer.classList.add('open'); cartDrawer.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+    function closeCart(){ cartDrawer.classList.remove('open'); cartDrawer.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+    function add(id){ const found=state.cart.find(i=>i.id===id); if(found) found.qty++; else state.cart.push({id,qty:1}); save(); renderCart(); showToast('Added to your basket'); }
+    function change(id,delta){ const item=state.cart.find(i=>i.id===id); if(!item)return; item.qty+=delta; if(item.qty<=0) state.cart=state.cart.filter(i=>i.id!==id); save(); renderCart(); }
+    function remove(id){ state.cart=state.cart.filter(i=>i.id!==id); save(); renderCart(); }
+    function sendWhatsApp(){
+      const items=cartDetails(); if(!items.length){showToast('Your basket is empty');return;}
+      const total=items.reduce((s,i)=>s+i.price*i.qty,0);
+      const lines=items.map(i=>`• ${i.id} — ${i.name} × ${i.qty} — ${money(i.price*i.qty)}`).join('\n');
+      const message=`Hi Divyanshi! I’d like to place an order from Gifted Delights.\n\n${lines}\n\nSubtotal: ${money(total)}\n\nPlease confirm availability, delivery charges and the final amount/payment details. Thank you!`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener');
+    }
+    filters.addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;state.filter=b.dataset.filter;renderFilters();renderProducts();});
+    productGrid.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b)add(b.dataset.add);});
+    cartItems.addEventListener('click',e=>{const inc=e.target.closest('[data-inc]');const dec=e.target.closest('[data-dec]');const rem=e.target.closest('[data-remove]');if(inc)change(inc.dataset.inc,1);if(dec)change(dec.dataset.dec,-1);if(rem)remove(rem.dataset.remove);});
+    document.getElementById('cartBtn').addEventListener('click',openCart); document.getElementById('closeCart').addEventListener('click',closeCart); document.getElementById('cartOverlay').addEventListener('click',closeCart); document.getElementById('whatsappOrder').addEventListener('click',sendWhatsApp);
+    document.getElementById('menuBtn').addEventListener('click',()=>{const n=document.getElementById('mobileNav');n.style.display=n.style.display==='none'?'block':'none';});
+    document.querySelectorAll('#mobileNav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileNav').style.display='none'));
+    renderFilters(); renderProducts(); renderCart();
+  </script>
+</body>
+</html>
